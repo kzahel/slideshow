@@ -4,7 +4,7 @@ function showStatus(msg) {
     document.getElementById('status').innerText = msg
 }
 
-var delay = 3000
+var delay = 30000
 var nextTimeout
 var sidx = 0
 var allFiles = []
@@ -15,6 +15,8 @@ function shuffle(o){ //v1.0
 };
 
 function ready() {
+  var window = chrome.app.window.current();
+  window.fullscreen();
 
 $('#wasteheader').hide();
 $('#status').hide();
@@ -56,6 +58,32 @@ $('#status').hide();
 	}
 
     })
+
+    $('#schedule').html('<p>Showing any characters with scroll</p>');
+    /*
+    //get scroll text from server
+    $.post(
+        "http://localhost/foogetter/index.php",
+        {
+
+        },
+        function(data){
+          $('#schedule').html(data);
+        }
+        );
+    var rst = setInterval( function (){
+      $.post(
+        "http://localhost/foogetter/index.php",
+        {
+
+        },
+        function(data){
+          $('#schedule').html(data);
+        }
+        );
+    }, 10 * 60 * 1000);
+    */
+
 }
 
 
@@ -103,8 +131,7 @@ function showPicture(entry) {
     //document.getElementById('content').appendChild(text)
     //document.getElementById('content').appendChild(document.createElement('br'))
 
-    document.getElementById('content').appendChild(img);
-    $('#schedule').html('hogehoge');
+        document.getElementById('content').appendChild(img);
 
 }
 

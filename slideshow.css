@@ -1,0 +1,41 @@
+/* refer to http://ameblo.jp/ca-1pixel/entry-11534620349.html */
+
+
+body{
+  cursor:url("hide.png"), pointer;
+}
+.ticker {
+  background-color: #333;
+  color: #fff;
+  overflow: hidden;
+}
+
+.ticker p {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  margin-top:12px;
+  font-family: "ＭＳ Ｐゴシック","ＭＳ ゴシック",sans-serif;
+  font-weight:bold;
+  
+
+  -webkit-animation-name: ticker-animation;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 20s;
+
+  animation-name: ticker-animation;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 20s;
+}
+
+@-webkit-keyframes ticker-animation {
+  from   { -webkit-transform: translate(0%);}
+  99%,to { -webkit-transform: translate(-100%);}
+}
+
+@keyframes ticker-animation {
+  from   { -webkit-transform: translate(0%);}
+  99%,to { -webkit-transform: translate(-100%);}
+}
