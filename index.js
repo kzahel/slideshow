@@ -17,6 +17,7 @@ function chooseFolders() {
 
 function onStart() {
     // get opts for starting
+
     chrome.app.window.get('index').close()
     chrome.app.window.create('slideshow.html?all=true',{id:'slideshow'})
 }

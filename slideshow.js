@@ -16,6 +16,9 @@ function shuffle(o){ //v1.0
 
 function ready() {
 
+$('#wasteheader').hide();
+$('#status').hide();
+
     document.body.addEventListener('keydown', function(evt) {
 	if (evt.keyCode == 37) {
 	    // back
@@ -91,16 +94,18 @@ function showRandom(dontschedule, customIdx) {
 
 
 function showPicture(entry) {
-    var img = document.createElement('img')
-    img.src = entry.toURL()
-    img.style.width='100%'
-    var text = document.createElement('span')
-    text.innerText = entry.fullPath
-    document.getElementById('content').innerHTML = ''
-    document.getElementById('content').appendChild(text)
-    document.getElementById('content').appendChild(document.createElement('br'))
+    var img = document.createElement('img');
+    img.src = entry.toURL();
+    img.style.width='100%';
+    var text = document.createElement('span');
+    text.innerText = entry.fullPath;
+    document.getElementById('content').innerHTML = '';
+    //document.getElementById('content').appendChild(text)
+    //document.getElementById('content').appendChild(document.createElement('br'))
 
-    document.getElementById('content').appendChild(img)
+    document.getElementById('content').appendChild(img);
+    $('#schedule').html('hogehoge');
+
 }
 
 function addToFiles(entry, allresults, callback) {
