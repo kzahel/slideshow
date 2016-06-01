@@ -17,8 +17,14 @@ function chooseFolders() {
 
 function onStart() {
     // get opts for starting
-    chrome.app.window.get('index').close()
-    chrome.app.window.create('slideshow.html?all=true',{id:'slideshow'})
+
+    chrome.app.window.get('index').close();
+    var rndcheck = 0;
+    if ($('#rnd').is(':checked')) {
+      rndcheck = 1;
+    }
+    chrome.app.window.create('slideshow.html?all=true&random='+rndcheck+'&delay='+$('#delay').val(),{id:'slideshow'});
+    
 }
 
 function restoreDirectory(callback) {

@@ -1,3 +1,5 @@
+
+
 <div id="image"></div>
 <div id="status"></div>
 <div id="nodirectory" style="display:none">
@@ -9,12 +11,25 @@
   <input type="button" id="addfolder" value="Add Folder" style="display:none" />
 
   <input type="button" id="choosefolders" value="Select Folders" />
-random<input type="checkbox" checked="checked" disabled="disabled"/>
+random<input id="rnd" type="checkbox" checked="checked" />
 
 delay
 <select id="delay">
 
-<option value="3">3s</option>
+<option value="3">3sec</option>
+<option value="5">5sec</option>
+<option value="10">10sec</option>
+<option value="20">20sec</option>
+<option value="30">30sec</option>
+<option value="40">40sec</option>
+<option value="50">50sec</option>
+<option value="60">60sec</option>
+<option value="120">2min</option>
+<option value="300">5min</option>
+<option value="600">10min</option>
+<option value="1200">20min</option>
+
+
 </select>
 
 
@@ -25,6 +40,7 @@ delay
 <p>more options, like recursive scanning, configuring delay, image scaling, fullscreen, etc to come.</p>
 
 <a href="https://chrome.google.com/webstore/detail/simple-slideshow/ifjnjbjmhoicgefokkkeclokbphfaeki" target="_blatk">Leave feedback or review</a>
+<script src="jquery-2.1.3.min.js"></script>
 
 <script src="index.js"></script>
 
